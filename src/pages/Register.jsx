@@ -1,4 +1,5 @@
 import React from 'react'
+import GoogleAuth from '../components/GoogleAuth';
 import { Footer, Navbar } from "../components";
 import { Link } from 'react-router-dom';
 const Register = () => {
@@ -47,6 +48,10 @@ const Register = () => {
                                 </button>
                             </div>
                         </form>
+                        <div className="text-center mt-4">
+                            <p>or</p>
+                            <GoogleAuth /> {/* Google Sign-in Button */}
+                        </div>    
                     </div>
                 </div>
             </div>

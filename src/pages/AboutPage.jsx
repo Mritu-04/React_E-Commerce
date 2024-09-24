@@ -8,19 +8,7 @@ const AboutPage = () => {
         <h1 className="text-center">About Us</h1>
         <hr />
         <p className="lead text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          facere doloremque veritatis odit similique sequi. Odit amet fuga nam
-          quam quasi facilis sed doloremque saepe sint perspiciatis explicabo
-          totam vero quas provident ipsam, veritatis nostrum velit quos
-          recusandae est mollitia esse fugit dolore laudantium. Ex vel explicabo
-          earum unde eligendi autem praesentium, doloremque distinctio nesciunt
-          porro tempore quis eaque labore voluptatibus ea necessitatibus
-          exercitationem tempora molestias. Ad consequuntur veniam sequi ullam
-          tempore vel tenetur soluta dolore sunt maxime aliquam corporis est,
-          quo saepe dolorem optio minus sint nemo totam dolorum! Reprehenderit
-          delectus expedita a alias nam recusandae illo debitis repellat libero,
-          quasi explicabo molestiae saepe, dolorem tempore itaque eveniet quam
-          dignissimos blanditiis excepturi harum numquam vel nihil? Ipsum
+        Welcome to StyleHive! We are a passionate team dedicated to bringing you the latest in fashion and unique styles that reflect your individuality.StyleHive offers a curated collection of trendy and timeless pieces, ensuring you always find something special. Our mission is to provide high-quality, stylish products at affordable prices, coupled with exceptional customer service. We believe in the power of personal style and strive to make every shopping experience enjoyable and inspiring. Join our vibrant community and let your style shine with StyleHive!
         </p>
 
         <h2 className="text-center py-4">Our Products</h2>

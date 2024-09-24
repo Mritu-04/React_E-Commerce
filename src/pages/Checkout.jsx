@@ -2,6 +2,7 @@ import React from "react";
 import { Footer, Navbar } from "../components";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import GooglePayButton from "@google-pay/button-react";
 const Checkout = () => {
   const state = useSelector((state) => state.handleCart);
 
@@ -195,6 +196,45 @@ const Checkout = () => {
                     <hr className="my-4" />
 
                     <h4 className="mb-3">Payment</h4>
+                    <GooglePayButton
+  environment="TEST"
+  buttonSizeMode="fill"
+  paymentRequest={{
+    apiVersion: 2,
+    apiVersionMinor: 0,
+    allowedPaymentMethods: [
+      {
+        type: 'CARD',
+        parameters: {
+          allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+          allowedCardNetworks: ['MASTERCARD', 'VISA'],
+        },
+        tokenizationSpecification: {
+          type: 'PAYMENT_GATEWAY',
+          parameters: {
+            gateway: 'example',
+            gatewayMerchantId: 'exampleGatewayMerchantId',
+          },
+        },
+      },
+    ],
+    merchantInfo: {
+      merchantId: '17613812255336763067',
+      merchantName: 'Demo Only (you will not be charged)',
+    },
+    transactionInfo: {
+      totalPriceStatus: 'FINAL',
+      totalPriceLabel: 'Total',
+      totalPrice: subtotal.toFixed(2), // Corrected here
+      currencyCode: 'USD',
+      countryCode: 'US',
+    },
+  }}
+  onLoadPaymentData={(paymentData) => {
+    console.log('TODO: send order to server', paymentData.paymentMethodData);
+    history.push('/confirm');
+  }}
+/>
 
                     <div className="row gy-3">
                       <div className="col-md-6">

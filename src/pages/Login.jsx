@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Footer, Navbar } from "../components";
+import GoogleAuth from "../components/GoogleAuth";
 
 const Login = () => {
   return (
@@ -39,9 +40,16 @@ const Login = () => {
                 </button>
               </div>
             </form>
+            {/* Google Authentication Section */}
+            <div className="text-center mt-4">
+              <p>or</p>
+              <GoogleAuth /> {/* Google Sign-in Button */}
+            </div>
           </div>
         </div>
       </div>
+      
+
       <Footer />
     </>
   );
